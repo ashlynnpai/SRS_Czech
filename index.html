@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SRS Flashcards for beginners Czech</title>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+   
+<div class="wrapper">
+    <h1>Flashcards for beginners Czech</h1><br>
+    <p>Number in deck: <div id=numCount></div></p>
+    <br>
+    <p id ="card"></p>
+
+    <br><br><br>
+    <input type="button" value="Easy" class="button" id="easybutton"/> 
+    <input type="button" value="Medium" class="button" id="medbutton"/> 
+    <input type="button" value="Hard" class="button" id="hardbutton"/> 
+    <input type="button" value="Known" class="button" id="knownbutton"/><br>
+    <input type="button" value="New" class="button" id="newbutton"/>
+    <input type="button" value="Reset" class="button" id="resetbutton"/>  
+    <br><br><br>
+    
+    <p>These flashcards are based on the Spaced Repetition System (SRS) in which difficult cards appear more frequently and easier cards less often as determined by the learner's rating.  The level is beginners Czech (European level A1).</p><br>
+<div class=directions>    
+    <p>Directions:</p>
+    <p>Click on the card to see the reverse side.<br>Click on Easy/Medium/Hard to assign a card to a difficulty rating and move to the next card.<br>When you click on Next a new deck is formed made up of all the cards remaining in the old deck plus a combination of cards assigned a rating, with hard cards appearing more often relative to easy cards.  If there are not enough hard or medium cards, all the cards will be included in the deck.<br>If you run out of cards, click on Next again.<br>Click on Reset to revert to the original deck.</p>   
+</div>
+</div>
+</body>
+   
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
