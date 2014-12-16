@@ -1,0 +1,1 @@
+These are spaced repetition system flashcards for beginners Czech.

@@ -1,34 +1,4 @@
-
-var set = [
-{front: "Dobrý den.", back: "Hello."},
-{front: "Jak se máte?", back: "How are you?"},
-{front: "Děkuji", back: "Thanks"},
-{front: "Prosím ", back: "Please"},
-{front: "Promiňte", back: "Excuse me."},
-{front: "Na shledanou.", back: "Goodbye."},
-{front: "dnes", back: "today"},
-{front: "včera", back: "yesterday"},
-{front: "zítra", back: "tomorrow"},
-{front: "dopoledne", back: "morning"},
-{front: "tento týden", back: "this week"},   
-{front: "minulý týden", back: "last week"}, 
-{front: "příští týden", back: "next week"},
-{front: "pondělí", back: "Monday"},
-{front: "úterý", back: "Tuesday"},
-{front: "středa", back: "Wednesday"},
-{front: "čtvrtek", back: "Thursday"},
-{front: "pátek", back: "Friday"},
-{front: "sobota", back: "Saturday"},
-{front: "snídaně ", back: "breakfast"},
-{front: "oběd", back: "lunch"},
-{front: "večeře", back: "dinner"},
-{front: "chelba", back: "bread"},
-{front: "voda", back: "water"},
-{front: "pivo", back: "beer"},
-]; 
-
-var origset = set.slice(0);
-
+var set = [];
 var easySet=[];
 var medSet=[];
 var hardSet=[];
@@ -36,16 +6,23 @@ var newSet=[];
 var Card;  
 var newCard;
 var count;
+var origset = set.slice(0);
+
+$.getJSON('js/set.json', function(data) {
+    $.each(data, function(index, item) {
+        set.push(item);       
+    });
+  set = shuffle(set);
+  cycle();
+});
 
 function cycle(){
 Card = set.shift();  
 $("#card").html(Card.front);
-count = set.length;
+count = set.length + 1;
 $("#numCount").html(count);
 }
 
-cycle();
- 
 $("#card").click(function(){
     $("#card").html($("#card").text() == Card.front ? Card.back : Card.front);
     });
@@ -83,7 +60,7 @@ if (hardSet.length > 5){
     var z = hardSet;
     newSet = set.concat(x, y, z);
     set = newSet;
-    console.log(set);
+    set = shuffle(set);
 }
 else if (medSet.length > 5 && hardSet.length <= 5){
     easyNew = Math.ceil(medSet.length/4);
@@ -97,12 +74,12 @@ else if (medSet.length > 5 && hardSet.length <= 5){
     var z = hardSet;
     newSet = set.concat(x, y, z);
     set = newSet;
-    console.log(set);
+    set = shuffle(set);
 }
 else {
     newSet = set.concat(easySet, medSet, hardSet);
     set = newSet;
-    console.log(set);
+    set = shuffle(set);
 }
 cycle();
    });   
@@ -112,4 +89,7 @@ set = origset;
 cycle();
    });    
 
-
+function shuffle(o){
+for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};

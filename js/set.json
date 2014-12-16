@@ -1,0 +1,52 @@
+{
+  "1":
+{"front": "Dobrý den.", "back": "Hello."},
+  "2":
+{"front": "Jak se máte?", "back": "How are you?"},
+  "3":
+{"front": "Děkuji", "back": "Thanks"},
+  "4":
+{"front": "Prosím ", "back": "Please"},
+  "5":
+{"front": "Promiňte", "back": "Excuse me."},
+  "6":
+{"front": "Na shledanou.", "back": "Goodbye."},
+  "7":
+{"front": "dnes", "back": "today"},
+  "8":
+{"front": "včera", "back": "yesterday"},
+  "9":
+{"front": "zítra", "back": "tomorrow"},
+  "10":
+{"front": "dopoledne", "back": "morning"},
+  "11":
+{"front": "tento týden", "back": "this week"}, 
+  "12":
+{"front": "minulý týden", "back": "last week"}, 
+  "13":
+{"front": "příští týden", "back": "next week"},
+  "14":
+{"front": "pondělí", "back": "Monday"},
+  "15":
+{"front": "úterý", "back": "Tuesday"},
+  "16":
+{"front": "středa", "back": "Wednesday"},
+  "17":
+{"front": "čtvrtek", "back": "Thursday"},
+  "18":
+{"front": "pátek", "back": "Friday"},
+  "19":
+{"front": "sobota", "back": "Saturday"},
+  "20":
+{"front": "snídaně ", "back": "breakfast"},
+  "21":
+{"front": "oběd", "back": "lunch"},
+  "22":
+{"front": "večeře", "back": "dinner"},
+  "23":
+{"front": "chelba", "back": "bread"},
+  "24":
+{"front": "voda", "back": "water"},
+  "25":
+{"front": "pivo", "back": "beer"}
+}
